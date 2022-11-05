@@ -1,9 +1,11 @@
+import TextBox from "./Components/TextBox";
+
 function App() {
-  return (
-    <div className="">
-      Hello
-    </div>
-  )
+	return (
+		<div className="">
+			<TextBox />
+		</div>
+	);
 }
 
-export default App
+export default App;
