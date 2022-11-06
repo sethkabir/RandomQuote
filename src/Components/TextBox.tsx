@@ -14,12 +14,11 @@ const TextBox = () => {
 
 	//works when the button is clicked!
 	const handleClick = () => {
-		let randomNum: number = Math.floor(Math.random() * 1643 + 1);
+		let randomNum: number = Math.floor(Math.random() * 1642 + 1);
 		axios
 			.get("https://type.fit/api/quotes")
 			.then((res) => {
 				setQuote(res.data[randomNum]);
-				console.log(randomNum);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -28,7 +27,7 @@ const TextBox = () => {
 
 	//use effect for when the app is first loaded (component did mount)
 	useEffect(() => {
-		let randomNum: number = Math.floor(Math.random() * 1643 + 1);
+		let randomNum: number = Math.floor(Math.random() * 1642 + 1);
 
 		axios
 			.get("https://type.fit/api/quotes")
@@ -43,9 +42,9 @@ const TextBox = () => {
 	return (
 		<div
 			id="quote-box"
-			className="absolute top-1/2 left-1/2 md:h-[400px] md:w-[750px] w-[350px] -translate-y-1/2 -translate-x-1/2 bg-red-200 p-2 space-y-3"
+			className="absolute top-1/2 left-1/2 h-[300px] md:h-[300px] md:w-[750px] w-[350px] -translate-y-1/2 -translate-x-1/2 border-4 rounded-lg p-2"
 		>
-			<div id="text" className="bg-blue-200 h-3/4 p-5 m-2">
+			<div id="text" className="border-2 rounded-md h-44 p-5 m-2">
 				<div className="sm:text-xl text-justify p-2">{quote?.text}</div>
 
 				<div id="author" className="text-right mr-8">
@@ -55,7 +54,7 @@ const TextBox = () => {
 			<button
 				id="new-quote"
 				onClick={handleClick}
-				className="absolute right-5 bg-green-50 p-3"
+				className="absolute right-5 p-3 border-2 rounded-md"
 			>
 				Click Here
 			</button>
