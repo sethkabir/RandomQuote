@@ -13,7 +13,9 @@ function App() {
 
 	return (
 		<div className={`h-screen ${bgColor}`}>
+			<div className="text-2xl p-2 font-extrabold">Random Quote Generator</div>
 			<TextBox callbackFunc={callback} />
+			<div className="p-2 absolute bottom-0 right-0">made by kabir seth</div>
 		</div>
 	);
 }
