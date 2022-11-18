@@ -8,6 +8,7 @@ type Quote = {
 	author: string;
 };
 
+//type for the callback function being passed from the parent to the child component
 type ParentProp = {
 	callbackFunc: (color: string) => void;
 };
