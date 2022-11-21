@@ -53,11 +53,11 @@ const TextBox = (props: ParentProp) => {
 	return (
 		<div
 			id="quote-box"
-			className={`absolute top-1/2 left-1/2 h-[300px] md:h-[300px] md:w-[750px] w-[350px] -translate-y-1/2 -translate-x-1/2 border-4 rounded-lg p-2  transition-colors border-black bg-white`}
+			className={`absolute top-1/2 left-1/2 h-[320px] md:h-[320px] md:w-[750px] w-[350px] -translate-y-1/2 -translate-x-1/2 border-4 rounded-lg p-2  transition-colors border-black bg-white`}
 		>
 			<div
 				id="text"
-				className="border-2 rounded-md h-44 p-5 m-2 border-black"
+				className="border-2 rounded-md h-52 p-5 m-2 border-black"
 			>
 				<div className="sm:text-xl text-justify p-2 font-bold">
 					{quote?.text}
